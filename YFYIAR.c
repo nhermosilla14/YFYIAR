@@ -251,6 +251,17 @@ int main()
 		printf(">");
 		continue;
 	}
+
+	 if ( ((ctrlresp(respuesta, "leer nota\n", "LEER NOTA\n")) == 1) )
+	{
+		if ( avance >= 6 )
+		{
+		cntcat("base/es/R2/leer_nota");
+		printf("\n");
+		printf(">");
+		continue;
+		}	
+	 }		
 	if ( (a==1) && (c>0) && (avance>=7) )
 	{
 		if (c == 1907)
@@ -264,18 +275,7 @@ int main()
 		printf(">");
 		continue;	
 		}
-	}
-	 if ( ((ctrlresp(respuesta, "leer nota\n", "LEER NOTA\n")) == 1) )
-	{
-		if ( avance >= 6 )
-		{
-		cntcat("base/es/R2/leer_nota");
-		printf("\n");
-		printf(">");
-		continue;
-		}	
-	 }		
-	 
+	}	 
 	 {
 		
 		int rnd=rand() % 3;

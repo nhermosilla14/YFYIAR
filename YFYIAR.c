@@ -211,6 +211,9 @@ int main()
 	char control[10];
 	while (1)
 	{
+	a=0;
+	b=0;
+	c=0;
 	fgets(respuesta,25,stdin);
 	a=sscanf(respuesta,"%s%d", control, &b);
 	if (a==1) sscanf(control,"%d",&c);
@@ -486,7 +489,7 @@ int main()
 		
 	if ( ((ctrlresp(respuesta, "mirar\n", "MIRAR\n")) == 1) || ((ctrlresp(respuesta,"mirar alrededor\n","MIRAR ALREDEDOR\n")) == 1) )
 	{
-		if ( avance >= 17 )
+		if ( avance == 17 )
 		{
 			cntcat("base/es/R5/mirar");
 			printf("\n");
@@ -593,7 +596,7 @@ int main()
 			}			
 		}
 		if ((ctrlresp(respuesta, "mirar sangre\n", "MIRAR SANGRE\n")) == 1) {
-			if (avance >= 29){
+			if (avance >= 29 && avance < 31){
 				cntcat("base/es/R6/mirar_sangre");
 				printf("\n");
 				printf(">");
